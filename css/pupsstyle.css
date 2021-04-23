@@ -1,0 +1,881 @@
+@keyframes bounceIn2 {
+  0% {transform: scale(0.1);
+    opacity: 0;
+  } 60% {
+    transform: scale(1);
+    opacity: 1;
+  } 100% {
+    transform: rotate(7deg);
+  }
+}
+@keyframes slide-left{
+  from{
+    margin-left: -100%;
+  } to {
+    margin-left: 0%;
+  }
+}
+@keyframes slide-right{
+  from{
+    margin-right: -100%;
+  } to {
+    margin-right: 0%;
+  }
+}
+@keyframes bounceIn1 {
+  0% {transform: scale(0.1);
+    opacity: 0;
+  } 60% {
+    transform: scale(1);
+    opacity: 1;
+  } 100% {
+    transform: rotate(-7deg);
+  }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-image: url("../images/background.jpg");
+  min-height: 1em;
+  height: 1000px;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  background-color: #d3d3d3;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 100px;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav li{
+  display:inline;
+  padding-right:20px;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+nav{
+  background-color: skyblue;
+  padding: 25px 0;
+  text-align: center;
+}
+.skip a{
+  background: skyblue;
+  left: 0;
+  font-family: Verdana, arial;
+  font-style:normal;
+  padding: 7px;
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+}
+.skip a:focus{
+  top: 10px;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  position: sticky;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+header{
+  margin-top: 10px;
+}
+header h1{
+  color: black;
+  font-size: 56px;
+  padding: 20px 0px;
+  text-align: center;
+  font-family: verdana, arial;
+  background-color: skyblue;
+  border-radius: 25px;
+  padding-right: 10px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav a:hover{
+  text-decoration: underline;
+  background-color: skyblue;
+}
+
+nav ul li .current{
+  background-color: violet;
+  color: black;
+  padding: 10px;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: medium;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 20px, 1fr, 1fr, 1fr, 20px;
+  grid-template-rows:300px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 200px;
+  row-gap: 20px;
+  align-items: start;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  font-family: verdana, arial;
+}
+
+.firstday{
+  grid-column: 2/4;
+  grid-row: 2/3;
+  width: 100%;
+}
+.firstday img, .break img, .yinyang img, .comfortable img, .arrival img{
+  object-fit: scale-down;
+  overflow: hidden;
+  height: 500px;
+  width: auto;
+  border-radius: 25px;
+  transform: rotate(-7deg);
+  animation-duration: 2s;
+  animation-name: bounceIn1;
+  box-shadow: 10px 10px 5px grey;
+}
+.firstday-text{
+  grid-column: 4/5;
+  grid-row: 2/3;
+  border-radius: 25px;
+  text-align: left;
+  padding: 100px 0;
+
+}
+.firstday-text h2, .firstday-text p, .break-text h2, .break-text p, .yinyang-text h2, .yinyang-text p, .comfortable-text h2, .comfortable-text p, .arrival-text h2, .arrival-text p{
+  animation-duration: 3.25s;
+  animation-name: slide-left;
+  background-color: skyblue;
+  border-radius: 25px;
+  padding-left: 10px;
+  box-shadow: 10px 10px 5px grey;
+  border-style: solid;
+  border-width: medium;
+}
+.office{
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+.office img, .promotion img, .christmas img, .longdog img{
+  object-fit: scale-down;
+  overflow: hidden;
+  height: 500px;
+  width: auto;
+  border-radius: 25px;
+  transform: rotate(7deg);
+  animation-duration: 2s;
+  animation-name: bounceIn2;
+  box-shadow: 10px 10px 5px grey;
+}
+.office-text{
+  grid-column: 2/3;
+  grid-row: 3/4;
+  text-align: right;
+  padding: 100px 0;
+}
+.office-text h2, .office-text p, .promotion-text h2, .promotion-text p, .christmas-text h2, .christmas-text p, .longdog-text h2, .longdog-text p, .curiosity-text h2, .curiosity-text p{
+  animation-duration: 3.25s;
+  animation-name: slide-right;
+  background-color: skyblue;
+  border-radius: 25px;
+  padding-right: 10px;
+  box-shadow: 10px 10px 5px grey;
+  border-style: solid;
+  border-width: medium;
+}
+.break{
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+
+.break-text{
+  grid-column: 4/5;
+  grid-row: 4/5;
+  text-align: left;
+  padding: 100px 0;
+}
+.promotion{
+  grid-column: 3/5;
+  grid-row: 5/6;
+}
+
+.promotion-text{
+  grid-column: 2/3;
+  grid-row: 5/6;
+  text-align: right;
+  padding: 100px 0;
+}
+.yinyang{
+  grid-column: 2/4;
+  grid-row: 6/7;
+}
+
+.yinyang-text{
+  grid-column: 4/5;
+  grid-row: 6/7;
+  text-align: left;
+  padding: 100px 0;
+}
+.christmas{
+  grid-column: 3/5;
+  grid-row: 7/8;
+}
+
+.christmas-text{
+  grid-column: 2/3;
+  grid-row: 7/8;
+  display: inline-block;
+  text-align: right;
+  padding: 100px 0;
+}
+.comfortable{
+  grid-column: 2/4;
+  grid-row: 8/9;
+}
+
+.comfortable-text{
+  grid-column: 4/5;
+  grid-row: 8/9;
+  text-align: left;
+  padding: 100px 0;
+}
+.longdog{
+  grid-column: 3/5;
+  grid-row: 9/10;
+}
+
+.longdog-text{
+  grid-column: 2/3;
+  grid-row: 9/10;
+  text-align: right;
+  padding: 100px 0;
+}
+.arrival{
+  grid-column: 2/4;
+  grid-row: 10/11;
+}
+
+.arrival-text{
+  grid-column: 4/5;
+  grid-row: 10/11;
+  text-align: left;
+  padding: 100px 0;
+}
+.curiosity{
+  grid-column: 3/5;
+  grid-row: 11/12;
+}
+.curiosity img{
+  object-fit: scale-down;
+  overflow: hidden;
+  height: 500px;
+  width: auto;
+  border-radius: 25px;
+  transform: rotate(7deg);
+  animation-duration: 2s;
+  animation-name: bounceIn2;
+  box-shadow: 10px 10px 5px grey;
+}
+.curiosity-text{
+  grid-column: 2/3;
+  grid-row: 11/12;
+  text-align: right;
+  padding: 100px 0;
+}
+@media (min-width: 650px) and (max-width: 1024px) {
+  html{
+      scroll-behavior: smooth;
+  }
+
+  body{
+    background-image: url("../images/background.jpg");
+    min-height: 1em;
+    height: 1000px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    background-color: #d3d3d3;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  nav li{
+    display:inline;
+    padding-right:20px;
+    font-size: 1em;
+    font-family: sans-serif;
+  }
+
+  nav{
+    background-color: skyblue;
+    padding: 25px 0;
+    text-align: center;
+  }
+  /* .skip a{
+    background: white;
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -50px;
+  }
+  .skip a:focus{
+    top: 10px;
+  } */
+
+  footer{
+    background-color: black;
+    color: white;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  header h1{
+    color: black;
+    font-size: 30px;
+    padding: 10px 0px;
+    text-align: center;
+    font-family: verdana, arial;
+    background-color: skyblue;
+    border-radius: 25px;
+    padding-right: 10px;
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav a:hover{
+    text-decoration: underline;
+    background-color: skyblue;
+  }
+
+  nav ul li .current{
+    background-color: violet;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: medium;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 20px, 1fr, 1fr, 1fr, 20px;
+    grid-template-rows:150px, 300px, 300px, 300px, 300px, 300px, 300px, 300px, 300px, 300px, 300px, 300px;
+    row-gap: 20px;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    font-family: verdana, arial;
+    font-size: 16px;
+  }
+
+  .firstday{
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .firstday img, .break img, .yinyang img, .comfortable img, .arrival img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 300px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(-7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn1;
+    box-shadow: 7px 7px 5px grey;
+  }
+  .firstday-text{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    border-radius: 25px;
+    text-align: left;
+    padding: 100px 0;
+
+  }
+  .firstday-text h2, .firstday-text p, .break-text h2, .break-text p, .yinyang-text h2, .yinyang-text p, .comfortable-text h2, .comfortable-text p, .arrival-text h2, .arrival-text p{
+    animation-duration: 3.25s;
+    animation-name: slide-left;
+    background-color: skyblue;
+    border-radius: 25px;
+    padding-left: 10px;
+    box-shadow: 7px 7px 5px grey;
+    border-style: solid;
+    border-width: medium;
+  }
+  .office{
+    grid-column: 3/5;
+    grid-row: 3/4;
+  }
+  .office img, .promotion img, .christmas img, .longdog img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 300px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn2;
+    box-shadow: 7px 7px 5px grey;
+  }
+  .office-text{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .office-text h2, .office-text p, .promotion-text h2, .promotion-text p, .christmas-text h2, .christmas-text p, .longdog-text h2, .longdog-text p, .curiosity-text h2, .curiosity-text p{
+    animation-duration: 3.25s;
+    animation-name: slide-right;
+    background-color: skyblue;
+    border-radius: 25px;
+    padding-right: 10px;
+    box-shadow: 7px 7px 5px grey;
+    border-style: solid;
+    border-width: medium;
+  }
+  .break{
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+
+  .break-text{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .promotion{
+    grid-column: 3/5;
+    grid-row: 5/6;
+  }
+
+  .promotion-text{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .yinyang{
+    grid-column: 2/4;
+    grid-row: 6/7;
+  }
+
+  .yinyang-text{
+    grid-column: 4/5;
+    grid-row: 6/7;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .christmas{
+    grid-column: 3/5;
+    grid-row: 7/8;
+  }
+
+  .christmas-text{
+    grid-column: 2/3;
+    grid-row: 7/8;
+    display: inline-block;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .comfortable{
+    grid-column: 2/4;
+    grid-row: 8/9;
+  }
+
+  .comfortable-text{
+    grid-column: 4/5;
+    grid-row: 8/9;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .longdog{
+    grid-column: 3/5;
+    grid-row: 9/10;
+  }
+
+  .longdog-text{
+    grid-column: 2/3;
+    grid-row: 9/10;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .arrival{
+    grid-column: 2/4;
+    grid-row: 10/11;
+  }
+
+  .arrival-text{
+    grid-column: 4/5;
+    grid-row: 10/11;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .curiosity{
+    grid-column: 3/5;
+    grid-row: 11/12;
+  }
+  .curiosity img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 300px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn2;
+    box-shadow: 7px 7px 5px grey;
+  }
+  .curiosity-text{
+    grid-column: 2/3;
+    grid-row: 11/12;
+    text-align: right;
+    padding: 100px 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  html{
+      scroll-behavior: smooth;
+  }
+
+  body{
+    background-image: url("../images/background.jpg");
+    min-height: 1em;
+    height: 1000px;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 0;
+    background-color: #d3d3d3;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  h1{
+    font-size: 50px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  h2{
+    font-size: 32px;
+    line-height: 1.5;
+  }
+
+  nav li{
+    display:inline;
+    padding-right:20px;
+    font-size: 1.5em;
+    font-family: sans-serif;
+  }
+
+  nav{
+    background-color: skyblue;
+    padding: 25px 0;
+    text-align: center;
+  }
+  /* .skip a{
+    background: white;
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -50px;
+  }
+  .skip a:focus{
+    top: 10px;
+  } */
+
+  footer{
+    background-color: black;
+    color: white;
+    position: sticky;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  header h1{
+    color: black;
+    font-size: 44px;
+    padding: 20px 0px;
+    text-align: center;
+    font-family: verdana, arial;
+    background-color: skyblue;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  nav a:hover{
+    text-decoration: underline;
+    background-color: skyblue;
+  }
+
+  nav ul li .current{
+    background-color: violet;
+    color: black;
+    padding: 10px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: medium;
+  }
+
+  .container{
+    display: grid;
+    grid-template-columns: 20px, 1fr, 1fr, 1fr, 20px;
+    grid-template-rows:300px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 500px, 200px;
+    row-gap: 20px;
+    align-items: start;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    font-family: verdana, arial;
+  }
+
+  .firstday{
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .firstday img, .break img, .yinyang img, .comfortable img, .arrival img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 500px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(-7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn1;
+    box-shadow: 10px 10px 5px grey;
+  }
+  .firstday-text{
+    grid-column: 4/5;
+    grid-row: 2/3;
+    border-radius: 25px;
+    text-align: left;
+    padding: 100px 0;
+
+  }
+  .firstday-text h2, .firstday-text p, .break-text h2, .break-text p, .yinyang-text h2, .yinyang-text p, .comfortable-text h2, .comfortable-text p, .arrival-text h2, .arrival-text p{
+    animation-duration: 3.25s;
+    animation-name: slide-left;
+    background-color: skyblue;
+    border-radius: 25px;
+    padding-left: 10px;
+    box-shadow: 10px 10px 5px grey;
+    border-style: solid;
+    border-width: medium;
+  }
+  .office{
+    grid-column: 3/5;
+    grid-row: 3/4;
+  }
+  .office img, .promotion img, .christmas img, .longdog img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 500px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn2;
+    box-shadow: 10px 10px 5px grey;
+  }
+  .office-text{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .office-text h2, .office-text p, .promotion-text h2, .promotion-text p, .christmas-text h2, .christmas-text p, .longdog-text h2, .longdog-text p, .curiosity-text h2, .curiosity-text p{
+    animation-duration: 3.25s;
+    animation-name: slide-right;
+    background-color: skyblue;
+    border-radius: 25px;
+    padding-right: 10px;
+    box-shadow: 10px 10px 5px grey;
+    border-style: solid;
+    border-width: medium;
+  }
+  .break{
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+
+  .break-text{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .promotion{
+    grid-column: 3/5;
+    grid-row: 5/6;
+  }
+
+  .promotion-text{
+    grid-column: 2/3;
+    grid-row: 5/6;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .yinyang{
+    grid-column: 2/4;
+    grid-row: 6/7;
+  }
+
+  .yinyang-text{
+    grid-column: 4/5;
+    grid-row: 6/7;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .christmas{
+    grid-column: 3/5;
+    grid-row: 7/8;
+  }
+
+  .christmas-text{
+    grid-column: 2/3;
+    grid-row: 7/8;
+    display: inline-block;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .comfortable{
+    grid-column: 2/4;
+    grid-row: 8/9;
+  }
+
+  .comfortable-text{
+    grid-column: 4/5;
+    grid-row: 8/9;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .longdog{
+    grid-column: 3/5;
+    grid-row: 9/10;
+  }
+
+  .longdog-text{
+    grid-column: 2/3;
+    grid-row: 9/10;
+    text-align: right;
+    padding: 100px 0;
+  }
+  .arrival{
+    grid-column: 2/4;
+    grid-row: 10/11;
+  }
+
+  .arrival-text{
+    grid-column: 4/5;
+    grid-row: 10/11;
+    text-align: left;
+    padding: 100px 0;
+  }
+  .curiosity{
+    grid-column: 3/5;
+    grid-row: 11/12;
+  }
+  .curiosity img{
+    object-fit: scale-down;
+    overflow: hidden;
+    height: 500px;
+    width: auto;
+    border-radius: 25px;
+    transform: rotate(7deg);
+    animation-duration: 2s;
+    animation-name: bounceIn2;
+    box-shadow: 10px 10px 5px grey;
+  }
+  .curiosity-text{
+    grid-column: 2/3;
+    grid-row: 11/12;
+    text-align: right;
+    padding: 100px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .firstday-text h2, .firstday-text p, .break-text h2, .break-text p, .yinyang-text h2, .yinyang-text p,
+  .comfortable-text h2, .comfortable-text p, .arrival-text h2, .arrival-text p, .firstday img, .break img,
+  .yinyang img, .comfortable img, .arrival img, .curiosity img, .office-text h2, .office-text p,
+  .promotion-text h2, .promotion-text p, .christmas-text h2, .christmas-text p, .longdog-text h2,
+  .longdog-text p, .curiosity-text h2, .curiosity-text p, .office img, .promotion img, .christmas img,
+  .longdog img{
+    animation: none;
+  }
+}
